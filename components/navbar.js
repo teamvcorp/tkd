@@ -1,17 +1,20 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from '../app/page.module.css'
+import styles from './navbar.css'
+
 
 export default function Navbar() {
     return (
 
         <>
             <header>
-                <div><p>Contact us today (712)295-2103</p>
+                <div className='infoStrip'>
+                <p className='infoStripInfo'>Contact us today (712)295-2103</p>
                     {/* <icon />
                     <icon /> */}
                 </div>
-                <div><nav>
+                <div className='navBarContainer'>
+                    <nav className='navBar'>
                     <Link href="/">Home</Link>
                     <Link href="/about">About</Link>
                     <Link href="/program">Program</Link>
@@ -20,7 +23,7 @@ export default function Navbar() {
                     <Link href="/contact">Contact</Link>
                 </nav>
                 </div>
-                <Link href="/"><Image src="/TKDLogo.png"
+                <Link href="/"><Image className='logo' src="/TKDLogo.png"
                     width={200}
                     height={200}
                     alt="Taekwondo logo" /></Link>

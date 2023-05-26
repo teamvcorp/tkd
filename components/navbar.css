@@ -1,0 +1,48 @@
+
+
+.infoStripInfo {
+    background-color: var(--red);
+    color: white;
+    padding: .5rem 0 .5rem 40rem;
+    
+
+}
+
+.navBarContainer {
+    background-color: white;
+    height: 8rem;
+    padding: 0 60rem;
+
+    
+  
+}
+.navBar{
+    height: 100%;
+display: flex;
+justify-content: space-around;
+align-items: center;
+
+}
+ 
+.navBar a {
+    text-decoration: none;
+    color: var(--red);
+    font-family: 'oswald', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+
+}
+
+.navBar a:hover {
+
+    border-bottom: 2px solid var(--navy);
+    color: var(--navy);	
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+
+.logo {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    
+}

@@ -1,0 +1,102 @@
+.homeContainer {
+    height: 87vh;
+}
+.spLayoutTop {
+    display: flex;
+    justify-content: space-around;
+    height: 38vh;
+    margin: 3rem 0;
+    
+}
+
+.spLayoutTopLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 40%;
+    margin-right: 5rem;
+
+}
+
+.spLayoutTopLeft h2{
+    padding-top: 3rem;
+}
+.spLayoutTopMid {
+    
+    border-left: 2px solid white;
+    width: 20%;
+}
+.imgLG {
+    position: absolute;
+    top: 10rem;
+    right: 50rem;
+    /* width: 60rem;
+    height: 45rem; */
+   
+    
+}
+
+.spLayoutTopRight {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    margin-right: 15rem;
+    width: 40%;
+}
+
+.homeHeroTxt {
+    text-align: end;
+}
+.enrollHomeBtn {
+    margin-top: 8rem;
+}
+.spLayoutBottom {
+    border-top: 3px solid white;
+    display: flex;
+    justify-content: space-around;
+    height: 38vh;
+    width: 100%;
+}
+
+.background {
+    
+    background-image: url(/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100rem;
+    height: 40rem;
+   
+   
+    
+    
+}
+.spLayoutBottomLeft {
+    
+}
+.spLayoutBottomMid {
+  
+}
+.spLayoutBottomRight {
+  
+}
+.programBox {
+    background-color: white;
+    width: 50rem;
+    height: 32rem;
+    border-radius: 8px;
+    margin-top: 5rem;
+    margin-left: 7rem;
+
+    
+}
+.homeProgramTxt {
+    background-color: transparent;
+}
+
+.imgHomePro {
+    height: 40rem;
+    width: 50rem;
+    position: absolute;
+    left: 22rem;
+}
