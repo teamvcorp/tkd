@@ -15,11 +15,11 @@ export default function Home() {
             <p>Storm Lake, IA</p>
             <h5 className='fontRed'>Self-Control</h5>
             <h5 className='fontRed'>Self-Awareness</h5>
-            <h5 className='fontRed'>Leadership</h5>
+            <h5 className='fontRed'>Leadership</h5>  
           </div>
 
           <div className='heroImg spLayoutTopMid'>
-            <Image className='imgLG' src='/tkdGroup.png'height={450} width={600} alt='kids doing taekwondo' />
+            <Image className='imgLG' src='/tkdGroup.png'height={400} width={575} alt='kids doing taekwondo' />
           </div>
 
           <div className='spLayoutTopRight'>
@@ -35,20 +35,20 @@ export default function Home() {
             <div className='spLayoutBottomLeft background'>
              <div className='programBox'>  
               <h4 className='homeProgramTxt'>Kids Taekwondo Class</h4>
-              <Image className='imgSm imgHomePro' src='/tkdGirl.png'height={450} width={450} alt='orange belt' />
+              <Image className='imgSm imgHomePro' src='/tkdGirl.png'height={425} width={525} alt='orange belt' />
             </div>
             </div>
             <div className='spLayoutBottomMid background'>
             <div className='programBox'>
               <h4 className='homeProgramTxt'>Afterschool Program</h4>
-              <Image src='/afterschoolBoy.png'height={100} width={100} alt='kid with backpack' />
+              <Image className='imgSm imgHomePro2' src='/afterschoolBoy.png'height={400} width={400} alt='kid with backpack' />
             </div>
             </div>  
           
             <div className='spLayoutBottomRight background'>
             <div className='programBox'>  
               <h4 className='homeProgramTxt'>TRIP Outreach</h4>
-              <Image src='/happyKids.png'height={100} width={100} alt='kids jumping and happy' />
+              <Image className='imgSm imgHomePro3' src='/happyKids.png'height={450} width={350} alt='kids jumping and happy' />
             </div>
           
             </div>
