@@ -73,6 +73,12 @@ p {
 .fontRed {
     color: var(--red);
 }
+.fontBlack {
+    color: black;
+}
+.fontYellow {
+    color: var(--yellow);
+}
 
 button {
     background-color: red;
@@ -90,4 +96,6 @@ button:hover {
 
     background-color: var(--navy);
 }
+
+
     

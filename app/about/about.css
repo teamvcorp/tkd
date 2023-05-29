@@ -1,0 +1,150 @@
+.aboutPage {
+    height: 79vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutTop {
+    display: flex;
+    justify-content: flex-end;
+    height: 55%;
+
+}
+
+.aboutTopLeftBox {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 5rem;
+    transform: translateX(4rem);
+    background-color: var(--red);
+    width: 60rem;
+    height: 30rem;
+    border-radius: 8px;
+
+}
+.robertImg {
+    border-radius: 6px;
+    
+}
+.aboutTopLeftBoxInnerBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    height: 25rem;
+    width: 30rem;
+    border-radius: 6px;
+}
+.list {
+    font-family:'lato', sans-serif;
+    font-size: 2rem;
+    line-height: 3rem;
+}
+.aboutTopRight {
+
+margin: 5rem 15rem 0 15rem;
+}
+.aboutTopRightContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.underline {
+    border-bottom: 2px solid var(--red);
+    text-align: center;
+}
+.aboutText {
+    max-width: 80rem;
+    text-align: center;
+    line-height: 3rem;
+    font-size: 2vh;
+    width: 65vw;
+
+  
+}
+.aboutEnrollBtn {
+    align-self: center;
+    margin-top: 2rem;
+}
+.aboutBottom {
+    display: flex;
+    background-image: url('/background.png');
+    border-top: 3px solid var(--yellow);
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.programBox {
+    background-color: white;
+    border-radius: 6px;
+    margin: 2rem;
+    width: 40rem;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.testimonialTxt {
+
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+    
+}
+.aboutProgramTxt {
+    font-size: 1.5rem;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.spLayoutBottomLeft {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
+@media (max-width: 1760px) {
+    .aboutPage {
+        height: 100%;
+    }
+
+    .aboutTop {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+       
+    }
+
+    .aboutBottom {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50rem;
+        background-image: none;
+        border: none;
+
+    }
+    .testimonialTxt {
+      text-align: center;
+     
+    }
+ 
+
+    .footer {
+      display: none;
+    /* position: fixed;
+    bottom: 0; */
+    }
+
+   
+}
