@@ -1,8 +1,11 @@
 "use client";
+
 import React, { useState } from "react";
+import {  useRouter } from "next/navigation";
 import "./enroll.css";
 
 export default function ContactUs() {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     fullname: "",
     email: "",
@@ -39,18 +42,8 @@ export default function ContactUs() {
     trip,
   } = formData;
 
-  //   Setting button text on form submission
-  const [buttonText, setButtonText] = useState("Send");
-
-  // Setting success or failure messages states
-  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
-  const [showFailureMessage, setShowFailureMessage] = useState(false);
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const  formattedData = async () => {
-      
-    };
 
     const res = await fetch("/api/sendgrid", {
       method: "POST",
@@ -60,6 +53,7 @@ export default function ContactUs() {
         "Content-Type": "application/json",
       },
     });
+    router.push('/')
   };
 
   return (
@@ -67,10 +61,10 @@ export default function ContactUs() {
       <h5 className="formH1">Enrollment Form</h5>
       <form onSubmit={handleSubmit} className="formBackground">
         <fieldset className="formSection">
-          <legend>Parent Details - Detalles de los padres </legend>
+          <legend> <strong>Parent Details</strong> <i> Detalles de los padres </i> </legend>
 
           <label htmlFor="fullname" className="">
-            Full Name <p className="fontBlack spanish">Nombre Completo <span className="text-red-500 dark:text-gray-50">*</span></p> 
+            Full Name <p className="fontBlack spanish"><i> Nombre Completo </i> <span className="text-red-500 dark:text-gray-50">*</span></p> 
             
           </label>
           <input
@@ -81,10 +75,11 @@ export default function ContactUs() {
             }}
             name="fullname"
             className="formInput"
+            required
           />
 
           <label htmlFor="email" className="">
-            E-mail <p className="fontBlack spanish">Correo Electrónico<span className="text-red-500">*</span></p> 
+            E-mail <p className="fontBlack spanish"> <i>Correo Electrónico</i><span className="text-red-500">*</span></p> 
           </label>
           <input
             type="email"
@@ -94,9 +89,10 @@ export default function ContactUs() {
               setFormData({ ...formData, email: e.target.value });
             }}
             className="formInput"
+            required
           />
           <label htmlFor="phone" className="">
-            Phone <p className="fontBlack spanish">Teléfono<span className="text-red-500">*</span> </p> 
+            Phone <p className="fontBlack spanish"> <i> Teléfono </i><span className="text-red-500">*</span> </p> 
           </label>
           <input
             type="text"
@@ -106,15 +102,16 @@ export default function ContactUs() {
               setFormData({ ...formData, phone: e.target.value });
             }}
             className="formInput"
+            required
           />
         </fieldset>
 
         <fieldset >
-          <legend>Participant Infomation - Información del participante</legend>
+          <legend> <strong>Participant Infomation</strong> <i> Información del participante </i></legend>
 
           <fieldset className="formSection">
             <label htmlFor="firstParticipantName" className="">
-              Name <span className="text-red-500">*</span> <p className="fontBlack spanish">nombre completo </p> 
+              Name <span className="text-red-500">*</span> <p className="fontBlack spanish"> <i>nombre completo</i> </p> 
             </label>
             <input
               type="text"
@@ -127,9 +124,10 @@ export default function ContactUs() {
                 });
               }}
               className="formInput"
+              required
             />
             <label htmlFor="age" className="">
-              Age <span className="text-red-500">*</span> <p className="fontBlack spanish">edad </p> 
+              Age <span className="text-red-500">*</span> <p className="fontBlack spanish"> <i> edad </i> </p> 
             </label>
             <input
               type="text"
@@ -139,9 +137,10 @@ export default function ContactUs() {
                 setFormData({ ...formData, firstAge: e.target.value });
               }}
               className="formInput"
+              required
             />
             <label htmlFor="medNeeds" className="">
-              Medical Needs <p className="fontBlack spanish">Necesidades Médicas</p> 
+              Medical Needs <p className="fontBlack spanish"><i>Necesidades Médicas</i></p> 
              
             </label>
             <textarea
@@ -151,13 +150,13 @@ export default function ContactUs() {
               onChange={(e) => {
                 setFormData({ ...formData, firstMedNeeds: e.target.value });
               }}
-              className=""
+              className="textareaMed"
             />
           </fieldset>
 
           <fieldset className="formSection">
             <label htmlFor="secondParticipantName" className="">
-            Name <p className="fontBlack spanish">nombre completo</p> 
+            Name <p className="fontBlack spanish"><i>nombre completo</i></p> 
             </label>
             <input
               type="text"
@@ -172,7 +171,7 @@ export default function ContactUs() {
               className="formInput"
             />
             <label htmlFor="age" className="">
-            Age <p className="fontBlack spanish">edad </p>
+            Age <p className="fontBlack spanish"><i> edad </i> </p>
             </label>
             <input
               type="text"
@@ -184,7 +183,7 @@ export default function ContactUs() {
               className="formInput"
             />
             <label htmlFor="medNeeds" className="">
-            Medical Needs <p className="fontBlack spanish">Necesidades Médicas</p> 
+            Medical Needs <p className="fontBlack spanish"><i>Necesidades Médicas</i></p> 
               
             </label>
             <textarea
@@ -194,13 +193,13 @@ export default function ContactUs() {
               onChange={(e) => {
                 setFormData({ ...formData, secondMedNeeds: e.target.value });
               }}
-              className=""
+              className="textareaMed"
             />
           </fieldset>
 
           <fieldset className="formSection">
             <label htmlFor="thirdParticipantName" className="">
-            Name <p className="fontBlack spanish">nombre completo</p> 
+            Name <p className="fontBlack spanish"><i>nombre completo</i></p> 
             </label>
             <input
               type="text"
@@ -215,7 +214,7 @@ export default function ContactUs() {
               className="formInput"
             />
             <label htmlFor="age" className="">
-            Age <p className="fontBlack spanish">edad </p>
+            Age <p className="fontBlack spanish"><i> edad </i> </p>
             </label>
             <input
               type="text"
@@ -227,7 +226,7 @@ export default function ContactUs() {
               className="formInput"
             />
             <label htmlFor="medNeeds" className="">
-            Medical Needs <p className="fontBlack spanish">Necesidades Médicas</p> 
+            Medical Needs <p className="fontBlack spanish"><i>Necesidades Médicas</i></p> 
              
             </label>
             <textarea
@@ -237,12 +236,15 @@ export default function ContactUs() {
               onChange={(e) => {
                 setFormData({ ...formData, thirdMedNeeds: e.target.value });
               }}
-              className=""
+              className="textareaMed"
             />
           </fieldset>
         </fieldset>
         <fieldset className="formSectionCheck">
-          <legend>Choose Programs -Elija Programas</legend>
+            
+        
+          <legend> <strong> Choose Programs </strong> <i> Elija Programas </i></legend>
+          <div className="checkboxContainer">
           <input
             type="checkbox"
             id="taekwondo"
@@ -254,6 +256,9 @@ export default function ContactUs() {
             className="checkbox"
           />
           <label className="checkboxLabel" for="taekwondo">Taekwondo</label>
+          </div>
+
+          <div className="checkboxContainer">
           <input
             type="checkbox"
             id="afterschool"
@@ -264,7 +269,10 @@ export default function ContactUs() {
             }}
             className="checkbox"
           />
-          <label for="afterschool">Afterschool</label>
+          <label className="checkboxLabel" for="afterschool">Afterschool</label>
+          </div>
+
+          <div className="checkboxContainer">
           <input
             type="checkbox"
             id="trip"
@@ -275,10 +283,12 @@ export default function ContactUs() {
             }}
             className="checkbox"
           />
-          <label for="trip">TRIP Outreach</label>
+          <label className="checkboxLabel" for="trip">TRIP Outreach</label>
+          </div>
         </fieldset>
+            <div className="formSectionMessage">
 
-        <label htmlFor="message" className="">
+        <label htmlFor="message" className="message">
           Message<span className="text-red-500">*</span>
         </label>
         <textarea
@@ -287,11 +297,12 @@ export default function ContactUs() {
           onChange={(e) => {
             setFormData({ ...formData, message: e.target.value });
           }}
-          className=""
-        ></textarea>
+          className="formMessage"
+          ></textarea>
+          </div>
 
-        <div className="">
-          <button type="submit" className="submitBtn">
+        <div className="formSubmitBtnContainer">
+          <button type="submit" className="formSubmitBtn">
             Submit
           </button>
         </div>

@@ -1,48 +1,74 @@
+'use client';
+import { useState } from "react";
 import Image from "next/image";
-import './about.css';
+import "./about.css";
 import { AiFillStar } from "react-icons/ai";
-
+import { GrCircleInformation } from "react-icons/gr";
 
 export default function About() {
+
+  const [isHovering, setIsHovering] = useState(false);
+
+  const handleMouseOver = () => {
+    setIsHovering(true);
+  };
+
+  const handleMouseOut = () => {
+    setIsHovering(false);
+  };
   return (
     <>
       <div className="aboutPage">
-        <div className="aboutTop">  
+        <div className="aboutTop">
           <div className="aboutTopLeft">
-            <div className="aboutTopLeftBox"> 
-            <Image className="robertImg" src="/tkdImg2.png" height={250} width={200} alt="" />
-            <div>
-              <div className="aboutTopLeftBoxInnerBox"> 
-              <h4 className="fontRed">Master Robert Von Der Becke</h4>
-              <ul className="list">
-                <li>Not sure</li>
-                <li>Still not sure</li>
-                <li>4th Degree Blackbelt</li>
-                <li>4th Degree Blackbelt</li>
-                <li>4th Degree Blackbelt</li>
-              </ul>
+            <div className="aboutTopLeftBox">
+              <Image
+                className="robertImg"
+                src="/tkdImg2.png"
+                height={250}
+                width={200}
+                alt=""
+              />
+              <div>
+                <div className="aboutTopLeftBoxInnerBox">
+                  <h4 className="fontRed">Master Robert Von Der Becke</h4>
+                  <ul className="list">
+                    <li>Master in Taekwondo</li>
+                    <li>Masters is Psychology</li>
+                    <li>Masters in Education*</li>
+                    {/* <li
+                      onMouseOver={handleMouseOver}
+                      // onMouseOut={handleMouseOut}
+                    >
+                      <GrCircleInformation />
+                    </li> */}
+                  </ul>
+                </div>
+                  {isHovering && <div>
+                    <p>Hello</p>
+                    </div>}
               </div>
             </div>
-            </div> 
           </div>
           <div className="aboutTopRight">
             <div className="aboutTopRightContent">
               <h5 className="underline">About the TKD Academy</h5>
               <p className="aboutText">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-                takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-                sed diam voluptua.
+                The Academy succesfully blends Taekwondo, Behavior, and
+                Conditioning into a comprehensive program that yeilds results in
+                excess of expectations. Make no mistake about it however, the
+                broad range of result is due to the narrow focus of training.
+                Appling science to training we effectively train behaviors and
+                muscle memories in such a way that leadership and mastery of
+                self become evident in daily actions and choices. If you want
+                achieve your full mental and physical potential The Academy is
+                the school for you!
               </p>
               <button className="aboutEnrollBtn">Enroll Now</button>
             </div>
           </div>
         </div>
-       
+
         <div className="aboutBottom">
           <h5 className="fontYellow testimonialTxt">Testimonials</h5>
           <div className="spLayoutBottomLeft background">
@@ -54,7 +80,13 @@ export default function About() {
                 stay amazingly positive. I can't say enough great things about
                 him and his studio."
               </p>
-              <span><AiFillStar color='#ffdd00' size={30}/><AiFillStar color='#ffdd00' size={30}/><AiFillStar color='#ffdd00' size={30}/><AiFillStar color='#ffdd00' size={30}/><AiFillStar color='#ffdd00' size={30}/></span>
+              <span>
+                <AiFillStar color="#ffdd00" size={30} />
+                <AiFillStar color="#ffdd00" size={30} />
+                <AiFillStar color="#ffdd00" size={30} />
+                <AiFillStar color="#ffdd00" size={30} />
+                <AiFillStar color="#ffdd00" size={30} />
+              </span>
             </div>
           </div>
           <div className="spLayoutBottomLeft background">
@@ -68,7 +100,13 @@ export default function About() {
                 technique building, lessons that apply both on and off the mat.
                 And we’re making new friends- always a bonus!"
               </p>
-              <span><AiFillStar color='#ffdd00' size={30}/><AiFillStar color='#ffdd00' size={30}/><AiFillStar color='#ffdd00' size={30}/><AiFillStar color='#ffdd00' size={30}/><AiFillStar color='#ffdd00' size={30}/></span>
+              <span>
+                <AiFillStar color="#ffdd00" size={30} />
+                <AiFillStar color="#ffdd00" size={30} />
+                <AiFillStar color="#ffdd00" size={30} />
+                <AiFillStar color="#ffdd00" size={30} />
+                <AiFillStar color="#ffdd00" size={30} />
+              </span>
             </div>
           </div>
           <div className="spLayoutBottomLeft background ">
@@ -80,7 +118,13 @@ export default function About() {
                 children more than my advise. If you can handle the truth this
                 school will put you on a positive path for your entire life."
               </p>
-              <span><AiFillStar color='#ffdd00' size={30}/><AiFillStar color='#ffdd00' size={30}/><AiFillStar color='#ffdd00' size={30}/><AiFillStar color='#ffdd00' size={30}/><AiFillStar color='#ffdd00' size={30}/></span>
+              <span>
+                <AiFillStar color="#ffdd00" size={30} />
+                <AiFillStar color="#ffdd00" size={30} />
+                <AiFillStar color="#ffdd00" size={30} />
+                <AiFillStar color="#ffdd00" size={30} />
+                <AiFillStar color="#ffdd00" size={30} />
+              </span>
             </div>
           </div>
           <div className="spLayoutBottomLeft background ">
@@ -96,7 +140,13 @@ export default function About() {
                 intense workout and is what you make of it. I am grateful to
                 find such a class and instructor so close to home!
               </p>
-              <span><AiFillStar color='#ffdd00' size={30}/><AiFillStar color='#ffdd00' size={30}/><AiFillStar color='#ffdd00' size={30}/><AiFillStar color='#ffdd00' size={30}/><AiFillStar color='#ffdd00' size={30}/></span>
+              <span>
+                <AiFillStar color="#ffdd00" size={30} />
+                <AiFillStar color="#ffdd00" size={30} />
+                <AiFillStar color="#ffdd00" size={30} />
+                <AiFillStar color="#ffdd00" size={30} />
+                <AiFillStar color="#ffdd00" size={30} />
+              </span>
             </div>
           </div>
         </div>
