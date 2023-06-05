@@ -1,7 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 :root {
     margin: 0;
     padding: 0;
     font-size: 62.5%;
+   
 
     --ltblue: #67cdfb;
     --blue: #004e89;
@@ -20,7 +26,9 @@ body, h1, h2, h3, h4, h5, p {
     
     
 }
-
+body {
+    height: 100vh;
+}
 h1, h2, h3, h4, h5, p {
 
     background-color: transparent;
@@ -97,5 +105,10 @@ button:hover {
     background-color: var(--navy);
 }
 
-
+.background {
+    background-image: url(/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
     

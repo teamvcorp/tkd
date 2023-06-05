@@ -7,7 +7,7 @@ export default function About() {
   return (
     <>
       <div className="aboutPage">
-        <div className="aboutTop">
+        <div className="aboutTop">  
           <div className="aboutTopLeft">
             <div className="aboutTopLeftBox"> 
             <Image className="robertImg" src="/tkdImg2.png" height={250} width={200} alt="" />
@@ -71,7 +71,7 @@ export default function About() {
               <span><AiFillStar color='#ffdd00' size={30}/><AiFillStar color='#ffdd00' size={30}/><AiFillStar color='#ffdd00' size={30}/><AiFillStar color='#ffdd00' size={30}/><AiFillStar color='#ffdd00' size={30}/></span>
             </div>
           </div>
-          <div className="spLayoutBottomLeft background">
+          <div className="spLayoutBottomLeft background ">
             <div className="programBox">
               <p className="aboutProgramTxt fontBlack">
                 "At first it was hard to accept that I could play a bigger part
@@ -83,7 +83,7 @@ export default function About() {
               <span><AiFillStar color='#ffdd00' size={30}/><AiFillStar color='#ffdd00' size={30}/><AiFillStar color='#ffdd00' size={30}/><AiFillStar color='#ffdd00' size={30}/><AiFillStar color='#ffdd00' size={30}/></span>
             </div>
           </div>
-          <div className="spLayoutBottomLeft background">
+          <div className="spLayoutBottomLeft background ">
             <div className="programBox">
               <p className="aboutProgramTxt fontBlack">
                 "I enjoy and am enrolled in the cardio class. Instructor: Robert

@@ -9,7 +9,7 @@
     justify-content: flex-end;
     height: 55%;
 
-}
+}  
 
 .aboutTopLeftBox {
     display: flex;
@@ -72,10 +72,10 @@ margin: 5rem 15rem 0 15rem;
 }
 .aboutBottom {
     display: flex;
-    background-image: url('/background.png');
+    height: 45%;
     border-top: 3px solid var(--yellow);
-    height: fit-content;
     display: flex;
+    align-items: center;
     justify-content: center;
     
 }
@@ -93,7 +93,9 @@ margin: 5rem 15rem 0 15rem;
     
 }
 .testimonialTxt {
-
+    position: absolute;
+    left: 5rem;
+    top: 46rem;
     text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
     
 }

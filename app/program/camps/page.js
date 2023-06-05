@@ -1,29 +1,26 @@
+import '../program.css'
 export default function Camps() {
     return (
       <>
-        <div className="taekwondoPage">
-          <div className="background">
-              <img src="" />
-            <div className="programBox">
-              <h2>Camps</h2>
-              <p className="homeProgramTxt fontBlack">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-                erat, sed diam voluptua. At vero eos et accusam et justo duo
-                dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-                sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-                amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                invidunt ut labore et dolore magna aliquyam erat, sed diam
-                voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-                Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-                dolor sit amet.
-              </p>
-              <button>Sign up Now</button>   
-            </div>
-          </div>
-          <div className="campsFooter">
-              <p>day camp summer camp fun activities field trips games and movies</p>
-          </div>
+    <div className="programContainerLeft">
+            <div className="programBackground programBackgroundLeft">
+          
+            <h5 className="programsH5Left">Camps</h5>
+            <p className="programsP programsPLeft">
+             Coming Soon!
+            </p>
+            <button className="programsBtnRight">Sign up Now</button>   
+          
+        </div>
+            <img className="programsImgRight " src="/superKids.png" height={400}/>
+      </div>
+        <div className="programsFooter programFooterOrange">
+            <p className="programsFooterP ">Day Camp</p>
+            <p className="programsFooterP ">Summer Camp</p>
+            <p className="programsFooterP ">Fun Activities</p>
+            <p className="programsFooterP ">Field Trips</p>
+            <p className="programsFooterP ">Games and Movies</p>
+           
         </div>
       </>
     );

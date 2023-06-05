@@ -1,0 +1,89 @@
+.programContainerLeft {
+height: 82vh;
+display: flex;
+
+}
+.programBackground {
+    background-image: url(/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;  
+    height: 80%;
+    width: 50%;
+    margin: auto;
+    margin-right: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    
+}
+.programBackgroundLeft {
+    margin-left: 6rem;   
+}
+.programsImgLeft {
+width: 50%;
+}
+.programsH5 {
+text-align: right;
+font-size: 6rem;
+margin: 3rem 6rem;
+}
+.programsH5Left {
+    text-align: left;
+    font-size: 6rem;
+margin: 3rem 6rem;
+}
+.programsP {
+text-align: right;
+margin: 6rem;
+}
+.programsPLeft {
+    text-align: left;
+}
+.programsBtnRight {
+margin-right: 6rem;
+}
+.programsFooter {
+background-color: var(--red);
+height: 5rem;
+border-top: 5px solid white;
+border-bottom: 5px solid white;
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+align-items: center;
+}
+.programsFooterP {
+text-transform: uppercase;
+font-family: 'oswald', sans-serif;
+font-weight: 600;
+font-size: 2.25rem;
+
+}
+.footer {
+display: none;
+}
+.programFooterGreen {
+    background-color: var(--seafoam)
+}
+.programFooterBlk {
+    background-color: black;
+}
+.programFooterYellow {
+    background-color: var(--yellow);
+   
+}
+.programFooterBlue {
+    background-color: var(--ltblue);
+    
+}
+.programFooterOrange {
+    background-color: var(--orange);
+   
+}
+.yotaeImg {
+   height: 70%;
+   margin-top: 6rem;
+}
+.programsFooterPNavy {
+    color: var(--navy);
+}

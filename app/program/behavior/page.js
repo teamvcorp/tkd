@@ -1,29 +1,25 @@
+import '../program.css'
 export default function Behavior() {
     return (
       <>
-        <div className="behaviorPage">
-          <div className="background">
-            <div className="programBox">
-              <h2>Behavioral Health</h2>
-              <p className="homeProgramTxt fontBlack">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-                erat, sed diam voluptua. At vero eos et accusam et justo duo
-                dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-                sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-                amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                invidunt ut labore et dolore magna aliquyam erat, sed diam
-                voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-                Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-                dolor sit amet.
-              </p>
-              <button>Sign up Now</button>   
-            </div>
-          </div>
-              <img src="" />
-          <div className="taekwondoFooter">
-              <p>one-on-one group sessions family plan aba-based</p>
-          </div>
+ <div className="programContainerLeft">
+            <div className="programBackground programBackgroundLeft">
+          
+            <h5 className="programsH5Left">Behavior Health</h5>
+            <p className="programsP programsPLeft">
+             Coming Soon!
+            </p>
+            <button className="programsBtnRight">Sign up Now</button>   
+          
+        </div>
+            <img className="programsImgRight " src="/family.png" height={600}/>
+      </div>
+        <div className="programsFooter programFooterBlue">
+            <p className="programsFooterP programsFooterPNavy">One-On-One </p>
+            <p className="programsFooterP programsFooterPNavy">Group Sessions</p>
+            <p className="programsFooterP programsFooterPNavy">Family Plan</p>
+            <p className="programsFooterP programsFooterPNavy">ABA Certified</p>
+           
         </div>
       </>
     );

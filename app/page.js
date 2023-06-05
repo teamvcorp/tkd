@@ -1,11 +1,13 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import "./page_home.css";
 
 export default function Home() {
-  function handleClick() {
-    console.log("Hello you cliked a button");
-  }
+  const handleClick = () => {
+    
+  };
+
   return (
     <>
       <div className="homeContainer">
@@ -32,7 +34,9 @@ export default function Home() {
             <h1 className="homeHeroTxt">
               Sign Up <br></br> Today!
             </h1>
-            <button onClick={handleClick}>Enroll now</button>
+            <Link href="/enroll">
+            <button>Enroll now</button>
+            </Link>
             <p>Open Enrollment until August 1st</p>
           </div>
         </div>

@@ -1,12 +1,13 @@
+import "./program.css";
 export default function Program() {
   return (
     <>
-      <div className="taekwondoPage">
-        <div className="background">
-            <img src="" />
-          <div className="programBox">
-            <h2>Taekwondo</h2>
-            <p className="homeProgramTxt fontBlack">
+      <div className="programContainerRight">
+            <img className="programsImgLeft" src="/tkdGroup.png" height={400} width={1000} />
+            <div className="programBackground">
+          
+            <h5 className="programsH5">Taekwondo</h5>
+            <p className="programsP">
               Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
               nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
               erat, sed diam voluptua. At vero eos et accusam et justo duo
@@ -18,13 +19,17 @@ export default function Program() {
               Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
               dolor sit amet.
             </p>
-            <button>Sign up Now</button>   
-          </div>
-        </div>
-        <div className="taekwondoFooter">
-            <p>discipline self-control confidence self-defense physical fitness</p>
+            <button className="programsBtnRight">Sign up Now</button>   
+          
         </div>
       </div>
+        <div className="programsFooter">
+            <p className="programsFooterP">discipline </p>
+            <p className="programsFooterP"> confidence </p>
+            <p className="programsFooterP">self-control</p>
+            <p className="programsFooterP">self-defense</p>
+            <p className="programsFooterP">physical fitness</p>
+        </div>
     </>
   );
 }

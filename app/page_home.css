@@ -1,5 +1,5 @@
 .homeContainer {
-    height: 78vh;
+ 
 }
 
 .spLayoutTop {
@@ -51,29 +51,14 @@
 }
 
 .background {
-    background-image: url(/background.png);
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 34%;
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-   
-   
-   
-    
-    
+    justify-content: center;  
 }
-/* .spLayoutBottomLeft {
-    position: relative;
-}
-.spLayoutBottomMid {
-    position: relative;
-}
-.spLayoutBottomRight {
-    position: relative;
-} */
+/* see .background in Global.css */
+
 .programBox {
     background-color: white;
     width: 85%;
