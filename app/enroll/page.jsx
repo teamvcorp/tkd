@@ -1,10 +1,11 @@
 "use client";
 import React, { useState } from "react";
+import './enroll.css'
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({
     fullname: "",
-    email: "",
+    email: "",  
     subject: "",
     message: "",
     
@@ -79,7 +80,8 @@ const {fullname, email, message, subject} = formData;
  
   };
   return (
-    <form
+    <div className="formContainer">
+    <form 
       onSubmit={handleSubmit}
       className="rounded-lg shadow-xl flex flex-col px-8 py-8 bg-white dark:bg-blue-500"
     >
@@ -168,5 +170,6 @@ const {fullname, email, message, subject} = formData;
         </button>
       </div>
     </form>
+    </div>
   );
 }
