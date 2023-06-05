@@ -1,18 +1,43 @@
 "use client";
 import React, { useState } from "react";
-import './enroll.css'
+import "./enroll.css";
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({
     fullname: "",
-    email: "",  
+    email: "",
     subject: "",
     message: "",
-    
+    phone: "",
+    firstParticipantName: "",
+    secondParticipantName: "",
+    thirdParticipantName: "",
+    firstAge: "",
+    secondAge: "",
+    thirdAge: "",
+    medNeeds: "",
+    taekwondo: false,
+    afterschool: false,
+    trip: false,
   });
-const {fullname, email, message, subject} = formData;
-  //   Form validation state
-  const [errors, setErrors] = useState({});
+  const {
+    fullname,
+    email,
+    message,
+    phone,
+    firstParticipantName,
+    secondParticipantName,
+    thirdParticipantName,
+    firstAge,
+    secondAge,
+    thirdAge,
+    firstMedNeeds,
+    secondMedNeeds,
+    thirdMedNeeds,
+    taekwondo,
+    afterschool,
+    trip,
+  } = formData;
 
   //   Setting button text on form submission
   const [buttonText, setButtonText] = useState("Send");
@@ -21,155 +46,256 @@ const {fullname, email, message, subject} = formData;
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [showFailureMessage, setShowFailureMessage] = useState(false);
 
- 
-  const handleValidation = () => {
-    let tempErrors = {};
-    let isValid = true;
-
-    if (fullname.length <= 0) {
-      tempErrors["fullname"] = true;
-      isValid = false;
-    }
-    if (email.length <= 0) {
-      tempErrors["email"] = true;
-      isValid = false;
-    }
-    if (subject.length <= 0) {
-      tempErrors["subject"] = true;
-      isValid = false;
-    }
-    if (message.length <= 0) {
-      tempErrors["message"] = true;
-      isValid = false;
-    }
-
-    setErrors({ ...tempErrors });
-    return isValid;
-  };
-
-   
-
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const  formattedData = async () => {
+      
+    };
 
-    let isValidForm = handleValidation();
-
-    if (isValidForm) {
-      setButtonText("Sending");
-      const res = await fetch("/api/sendgrid", {
-        method: "POST",
-        body: JSON.stringify(formData),
-        headers: {
-          Accept: 'application/json',
-          "Content-Type": "application/json",
-        },
-      });
-
-      const { error } = await res.json();
-      if (error) {
-        console.log(error);
-        setShowSuccessMessage(false);
-        setShowFailureMessage(true);
-        setButtonText("Send");
-        return;
-      }
-      setShowSuccessMessage(true);
-      setShowFailureMessage(false);
-      setButtonText("Send");
-    }
- 
+    const res = await fetch("/api/sendgrid", {
+      method: "POST",
+      body: JSON.stringify(formData),
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+    });
   };
+
   return (
     <div className="formContainer">
-    <form 
-      onSubmit={handleSubmit}
-      className="rounded-lg shadow-xl flex flex-col px-8 py-8 bg-white dark:bg-blue-500"
-    >
-      <h1 className="text-2xl font-bold dark:text-gray-50">Send a message</h1>
+      <h5 className="formH1">Enrollment Form</h5>
+      <form onSubmit={handleSubmit} className="formBackground">
+        <fieldset className="formSection">
+          <legend>Parent Details - Detalles de los padres </legend>
 
-      <label
-        htmlFor="fullname"
-        className="text-gray-500 font-light mt-8 dark:text-gray-50"
-      >
-        Full name<span className="text-red-500 dark:text-gray-50">*</span>
-      </label>
-      <input
-        type="text"
-        value={fullname}
-        onChange={(e) => {
-          setFormData({...formData, fullname: e.target.value});
-        }}
-        name="fullname"
-        className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
-      />
+          <label htmlFor="fullname" className="">
+            Full Name <p className="fontBlack spanish">Nombre Completo <span className="text-red-500 dark:text-gray-50">*</span></p> 
+            
+          </label>
+          <input
+            type="text"
+            value={fullname}
+            onChange={(e) => {
+              setFormData({ ...formData, fullname: e.target.value });
+            }}
+            name="fullname"
+            className="formInput"
+          />
 
-      <label
-        htmlFor="email"
-        className="text-gray-500 font-light mt-4 dark:text-gray-50"
-      >
-        E-mail<span className="text-red-500">*</span>
-      </label>
-      <input
-        type="email"
-        name="email"
-        value={email}
-        onChange={(e) => {
-          setFormData({...formData, email: e.target.value});
-        }}        className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
-      />
+          <label htmlFor="email" className="">
+            E-mail <p className="fontBlack spanish">Correo Electrónico<span className="text-red-500">*</span></p> 
+          </label>
+          <input
+            type="email"
+            name="email"
+            value={email}
+            onChange={(e) => {
+              setFormData({ ...formData, email: e.target.value });
+            }}
+            className="formInput"
+          />
+          <label htmlFor="phone" className="">
+            Phone <p className="fontBlack spanish">Teléfono<span className="text-red-500">*</span> </p> 
+          </label>
+          <input
+            type="text"
+            name="phone"
+            value={phone}
+            onChange={(e) => {
+              setFormData({ ...formData, phone: e.target.value });
+            }}
+            className="formInput"
+          />
+        </fieldset>
 
-      <label
-        htmlFor="subject"
-        className="text-gray-500 font-light mt-4 dark:text-gray-50"
-      >
-        Subject<span className="text-red-500">*</span>
-      </label>
-      <input
-        type="text"
-        name="subject"
-        value={subject}
-        onChange={(e) => {
-          setFormData({...formData, subject: e.target.value});
-        }}        className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
-      />
+        <fieldset >
+          <legend>Participant Infomation - Información del participante</legend>
 
-      <label
-        htmlFor="message"
-        className="text-gray-500 font-light mt-4 dark:text-gray-50"
-      >
-        Message<span className="text-red-500">*</span>
-      </label>
-      <textarea
-        name="message"
-        value={message}
-        onChange={(e) => {
-          setFormData({...formData, message: e.target.value});
-        }}
-        className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
-      ></textarea>
-
-      <div className="flex flex-row items-center justify-start">
-        <button
-          type="submit"
-          className="px-10 mt-8 py-2 bg-[#130F49] text-gray-50 font-light rounded-md text-lg flex flex-row items-center"
-        >
-          Submit
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            className="text-cyan-500 ml-2"
-            fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M9.00967 5.12761H11.0097C12.1142 5.12761 13.468 5.89682 14.0335 6.8457L16.5089 11H21.0097C21.562 11 22.0097 11.4477 22.0097 12C22.0097 12.5523 21.562 13 21.0097 13H16.4138L13.9383 17.1543C13.3729 18.1032 12.0191 18.8724 10.9145 18.8724H8.91454L12.4138 13H5.42485L3.99036 15.4529H1.99036L4.00967 12L4.00967 11.967L2.00967 8.54712H4.00967L5.44417 11H12.5089L9.00967 5.12761Z"
-              fill="currentColor"
+          <fieldset className="formSection">
+            <label htmlFor="firstParticipantName" className="">
+              Name <span className="text-red-500">*</span> <p className="fontBlack spanish">nombre completo </p> 
+            </label>
+            <input
+              type="text"
+              name="firstParticipantName"
+              value={firstParticipantName}
+              onChange={(e) => {
+                setFormData({
+                  ...formData,
+                  firstParticipantName: e.target.value,
+                });
+              }}
+              className="formInput"
             />
-          </svg>
-        </button>
-      </div>
-    </form>
+            <label htmlFor="age" className="">
+              Age <span className="text-red-500">*</span> <p className="fontBlack spanish">edad </p> 
+            </label>
+            <input
+              type="text"
+              name="firstAge"
+              value={firstAge}
+              onChange={(e) => {
+                setFormData({ ...formData, firstAge: e.target.value });
+              }}
+              className="formInput"
+            />
+            <label htmlFor="medNeeds" className="">
+              Medical Needs <p className="fontBlack spanish">Necesidades Médicas</p> 
+             
+            </label>
+            <textarea
+              type="text"
+              name="firstMedNeeds"
+              value={firstMedNeeds}
+              onChange={(e) => {
+                setFormData({ ...formData, firstMedNeeds: e.target.value });
+              }}
+              className=""
+            />
+          </fieldset>
+
+          <fieldset className="formSection">
+            <label htmlFor="secondParticipantName" className="">
+            Name <p className="fontBlack spanish">nombre completo</p> 
+            </label>
+            <input
+              type="text"
+              name="secondParticipantName"
+              value={secondParticipantName}
+              onChange={(e) => {
+                setFormData({
+                  ...formData,
+                  secondParticipantName: e.target.value,
+                });
+              }}
+              className="formInput"
+            />
+            <label htmlFor="age" className="">
+            Age <p className="fontBlack spanish">edad </p>
+            </label>
+            <input
+              type="text"
+              name="secondAge"
+              value={secondAge}
+              onChange={(e) => {
+                setFormData({ ...formData, secondAge: e.target.value });
+              }}
+              className="formInput"
+            />
+            <label htmlFor="medNeeds" className="">
+            Medical Needs <p className="fontBlack spanish">Necesidades Médicas</p> 
+              
+            </label>
+            <textarea
+              type="text"
+              name="secondMedNeeds"
+              value={secondMedNeeds}
+              onChange={(e) => {
+                setFormData({ ...formData, secondMedNeeds: e.target.value });
+              }}
+              className=""
+            />
+          </fieldset>
+
+          <fieldset className="formSection">
+            <label htmlFor="thirdParticipantName" className="">
+            Name <p className="fontBlack spanish">nombre completo</p> 
+            </label>
+            <input
+              type="text"
+              name="thirdParticipantName"
+              value={thirdParticipantName}
+              onChange={(e) => {
+                setFormData({
+                  ...formData,
+                  thirdParticipantName: e.target.value,
+                });
+              }}
+              className="formInput"
+            />
+            <label htmlFor="age" className="">
+            Age <p className="fontBlack spanish">edad </p>
+            </label>
+            <input
+              type="text"
+              name="thirdAge"
+              value={thirdAge}
+              onChange={(e) => {
+                setFormData({ ...formData, thirdAge: e.target.value });
+              }}
+              className="formInput"
+            />
+            <label htmlFor="medNeeds" className="">
+            Medical Needs <p className="fontBlack spanish">Necesidades Médicas</p> 
+             
+            </label>
+            <textarea
+              type="text"
+              name="thirdMedNeeds"
+              value={thirdMedNeeds}
+              onChange={(e) => {
+                setFormData({ ...formData, thirdMedNeeds: e.target.value });
+              }}
+              className=""
+            />
+          </fieldset>
+        </fieldset>
+        <fieldset className="formSectionCheck">
+          <legend>Choose Programs -Elija Programas</legend>
+          <input
+            type="checkbox"
+            id="taekwondo"
+            name="taekwondo"
+            value="taekwondo"
+            onChange={(e) => {
+              setFormData({ ...formData, taekwondo: e.target.value? true:false });
+            }}
+            className="checkbox"
+          />
+          <label className="checkboxLabel" for="taekwondo">Taekwondo</label>
+          <input
+            type="checkbox"
+            id="afterschool"
+            name="afterschool"
+            value="afterschool"
+            onChange={(e) => {
+              setFormData({ ...formData, afterschool: e.target.value? true:false });
+            }}
+            className="checkbox"
+          />
+          <label for="afterschool">Afterschool</label>
+          <input
+            type="checkbox"
+            id="trip"
+            name="trip"
+            value="trip"
+            onChange={(e) => {
+              setFormData({ ...formData, trip: e.target.value? true: false });
+            }}
+            className="checkbox"
+          />
+          <label for="trip">TRIP Outreach</label>
+        </fieldset>
+
+        <label htmlFor="message" className="">
+          Message<span className="text-red-500">*</span>
+        </label>
+        <textarea
+          name="message"
+          value={message}
+          onChange={(e) => {
+            setFormData({ ...formData, message: e.target.value });
+          }}
+          className=""
+        ></textarea>
+
+        <div className="">
+          <button type="submit" className="submitBtn">
+            Submit
+          </button>
+        </div>
+      </form>
     </div>
   );
 }

@@ -1,5 +1,57 @@
 .formContainer {
-    height: 69vh;
+ 
     width: 75%;
     margin: 6rem auto;
+}
+
+.formBackground {
+
+    background-color: white;
+    border-radius: 8px;
+    padding: 5rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+}
+/* .fixed {
+    resize: none;
+} */
+
+legend {
+    font-size: 2rem;
+    font-family: 'oswald',sans-serif;
+    font-weight: 600;
+    padding: 5rem 0 5rem 0;
+}
+label {
+    font-size: 1.75rem;
+    font-family: 'lato', sans-serif;
+    /* line-height: 6rem; */
+    font-weight: 700;
+    text-align: left;
+
+    
+}
+.formInput, textarea {
+   border: 1px solid black;
+   min-width: 27rem;
+   border-radius: 4px;
+   height: 3rem;
+  
+}
+.formSection {
+display: flex;
+flex-direction: row;
+align-items: flex-end;
+justify-content: space-evenly;
+margin: 2rem 0;
+}
+.formInput {
+
+}
+.spanish {
+    font-size: 1.5rem;
+    
+}
+.checkbox {
+    
 }
