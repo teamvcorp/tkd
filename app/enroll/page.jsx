@@ -22,6 +22,8 @@ export default function ContactUs() {
     taekwondo: false,
     afterschool: false,
     trip: false,
+    behavioralService: false,
+    yotae: false,
   });
   const {
     fullname,
@@ -40,6 +42,8 @@ export default function ContactUs() {
     taekwondo,
     afterschool,
     trip,
+    behavioralService,
+    yotae
   } = formData;
 
   const handleSubmit = async (e) => {
@@ -285,6 +289,32 @@ export default function ContactUs() {
           />
           <label className="checkboxLabel" for="trip">TRIP Outreach</label>
           </div>
+          <div className="checkboxContainer">
+          <input
+            type="checkbox"
+            id="behavioralService"
+            name="behavioralService"
+            value="behavioralService"
+            onChange={(e) => {
+              setFormData({ ...formData, behavioralService: e.target.value? true: false });
+            }}
+            className="checkbox"
+          />
+          <label className="checkboxLabel" for="behavioralService">Behavioral Services</label>
+          </div>
+          <div className="checkboxContainer">
+          <input
+            type="checkbox"
+            id="yotae"
+            name="yotae"
+            value="yotae"
+            onChange={(e) => {
+              setFormData({ ...formData, yotae: e.target.value? true: false });
+            }}
+            className="checkbox"
+          />
+          <label className="checkboxLabel" for="yotae">Yotae</label>
+          </div>
         </fieldset>
             <div className="formSectionMessage">
 
@@ -302,7 +332,7 @@ export default function ContactUs() {
           </div>
 
         <div className="formSubmitBtnContainer">
-          <button type="submit" className="formSubmitBtn">
+          <button type="submit" className="btn formSubmitBtn">
             Submit
           </button>
         </div>

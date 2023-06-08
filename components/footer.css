@@ -2,4 +2,6 @@
     background-color: var(--red);
     height: 8vh;
     width: 100%;
+    position: fixed;
+    bottom: 0;
 }

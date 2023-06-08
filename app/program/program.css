@@ -1,69 +1,70 @@
-.programContainerLeft {
+.programContainer {
 height: 82vh;
-display: flex;
+overflow: hidden;
+
 
 }
-.programBackground {
-    background-image: url(/background.png);
-    background-repeat: no-repeat;
-    background-size: cover;  
-    height: 80%;
-    width: 50%;
-    margin: auto;
-    margin-right: 6rem;
+.programContentContainer {
+   
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100vw;
+    margin-left: 5rem;
+    margin-top: 5rem;
+    grid-gap: 8rem;
+ 
 }
-.programBackgroundLeft {
-    margin-left: 6rem;   
+/* .programsBackground {
+    margin-top: 5rem;
+    position: absolute;
+    z-index: -1;
+    background-image: url(/background.png);
+    width: 100rem;
+    height: 50%;
+    left: 40vw;
+    top: 15rem;
+
+} */
+.programBehaviorImg, .programCardioImg, .programCampImg {
+    transform: translateY(17rem);
 }
-.programsImgLeft {
-width: 50%;
+
+.programInfo {
+    width: 40%;
+    margin-top: 8rem;
 }
+
 .programsH5 {
-text-align: right;
-font-size: 6rem;
-margin: 3rem 6rem;
+    margin-bottom: 2rem;
 }
-.programsH5Left {
-    text-align: left;
-    font-size: 6rem;
-margin: 3rem 6rem;
-}
-.programsP {
-text-align: right;
-margin: 6rem;
-}
-.programsPLeft {
-    text-align: left;
-}
-.programsBtnRight {
-margin-right: 6rem;
+
+.programsBtn {
+    margin-top: 3.5rem;
 }
 .programsFooter {
-background-color: var(--red);
-height: 5rem;
-border-top: 5px solid white;
-border-bottom: 5px solid white;
-display: flex;
-flex-direction: row;
-justify-content: space-evenly;
-align-items: center;
+    position: absolute;
+    bottom: 7.5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    height: 5vh;
 }
+
 .programsFooterP {
+    
+
 text-transform: uppercase;
 font-family: 'oswald', sans-serif;
-font-weight: 600;
-font-size: 2.25rem;
-
 }
-.footer {
-display: none;
+.programsFooterRed {
+    background-color: var(--navy);
 }
 .programFooterGreen {
-    background-color: var(--seafoam)
+    background-color: var(--green)
 }
 .programFooterBlk {
     background-color: black;
@@ -86,4 +87,4 @@ display: none;
 }
 .programsFooterPNavy {
     color: var(--navy);
-}
+} 

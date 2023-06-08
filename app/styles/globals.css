@@ -15,7 +15,7 @@
     --red: #ff002b;
 
     --yellow: #ffdd00;
-    --seafoam: #00e2bc;
+    --green: #00B41E;
     --orange: #ffa916;
 }
 
@@ -27,7 +27,10 @@ body, h1, h2, h3, h4, h5, p {
     
 }
 body {
-    height: 100vh;
+   height: 100vh;
+    
+    position: relative;
+ 
 }
 h1, h2, h3, h4, h5, p {
 
@@ -88,7 +91,7 @@ p {
     color: var(--yellow);
 }
 
-button {
+.btn {
     background-color: red;
     width: 25rem;
     height: 6rem;
@@ -98,6 +101,7 @@ button {
     font-family: 'oswald', sans-serif;
     font-size: 2.5rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-align: center;
 }
 
 button:hover {
@@ -110,5 +114,6 @@ button:hover {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
+    min-height: 100%;
 }
     

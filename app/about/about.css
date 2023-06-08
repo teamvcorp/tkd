@@ -1,5 +1,5 @@
 .aboutPage {
-    height: 79vh;
+
     display: flex;
     flex-direction: column;
 }
@@ -7,41 +7,43 @@
 .aboutTop {
     display: flex;
     justify-content: flex-end;
-    height: 55%;
+    height: 47vh;
 
 }  
-
+.aboutH4 {
+   color: var(--yellow);
+   position: absolute;
+   bottom: 1rem;
+   display: flex;
+   align-items: center;
+   font-size: 3vh;
+   
+}
 .aboutTopLeftBox {
-    display: flex;
-    flex-direction: row; 
-    align-items: center;
-    justify-content: space-around;
-    margin-top: 5rem;
-    transform: translateX(4rem);
-    background-color: var(--red);
-    width: 60rem;
-    height: 30rem;
-    border-radius: 8px;
-
+   position: relative;
+   display: grid;
+   grid-template-columns: 1fr 1.5fr;
+   background-color: var(--red);
+   border-radius: 8px;
+   margin: 6rem 3rem;
+   width: 100%;
 }
 .robertImg {
-    border-radius: 6px;
+   border-radius: 8px 0 0 8px;
+   min-width: 100%;
     
 }
 .aboutTopLeftBoxInnerBox {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    background-color: white;
-    height: 25rem;
-    width: 30rem;
-    border-radius: 6px;
+
 }
 .list {
+ 
     font-family:'lato', sans-serif;
-    font-size: 2rem;
-    line-height: 3rem;
+    font-size: 2.25vh;
+    line-height: 5rem;
+    margin-left: 1rem;
+    padding-top: 2rem;
+    color: white;
 }
 .aboutTopRight {
 
@@ -53,14 +55,14 @@ margin: 5rem 15rem 0 15rem;
     align-items: center;
     justify-content: space-between;
 }
-.underline {
+.redLine {
     border-bottom: 2px solid var(--red);
     text-align: center;
 }
 .aboutText {
     max-width: 80rem;
     text-align: center;
-    line-height: 3rem;
+    line-height: 150%;
     font-size: 2vh;
     width: 65vw;
 
@@ -72,7 +74,7 @@ margin: 5rem 15rem 0 15rem;
 }
 .aboutBottom {
     display: flex;
-    height: 45%;
+    height: 35vh;
     border-top: 3px solid var(--yellow);
     display: flex;
     align-items: center;
@@ -83,9 +85,9 @@ margin: 5rem 15rem 0 15rem;
 .programBox {
     background-color: white;
     border-radius: 6px;
-    margin: 2rem;
-    width: 40rem;
-    height: 25rem;
+    padding: 2rem;
+    max-width: 85%;
+    max-height: 85%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -95,17 +97,19 @@ margin: 5rem 15rem 0 15rem;
 .testimonialTxt {
     position: absolute;
     left: 5rem;
-    top: 46rem;
+    top: 47rem;
     text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+    
     
 }
 .aboutProgramTxt {
-    font-size: 1.5rem;
+    font-size: 1.5vh;
     width: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 2rem;
+    margin: auto;
+    line-height: 125%;
 }
 .spLayoutBottomLeft {
     display: flex;
@@ -113,9 +117,12 @@ margin: 5rem 15rem 0 15rem;
     justify-content: space-around;
 }
 
+.stars {
+    display: flex;
+    margin-bottom: 1rem;
+}
 
-
-@media (max-width: 1760px) {
+/* @media (max-width: 1760px) {
     .aboutPage {
         height: 100%;
     }
@@ -146,7 +153,7 @@ margin: 5rem 15rem 0 15rem;
       display: none;
     /* position: fixed;
     bottom: 0; */
-    }
+    
 
    
-}
+ 

@@ -22,11 +22,13 @@ export const POST = async (request) => {
       taekwondo,
       afterschool,
       trip,
+      behavioralService,
+      yotae,
     } = body;
     const emailTemplate =
          `<div>
             <p>Parents name is: ${fullname}, they can be reached at the email address ${email}, or by phone ${phone}. They have the following considerations "${message}"</p>
-            <p>They are intrested in the following programs Taekwondo: ${taekwondo}, Afterschool: ${afterschool}, trip: ${trip}</p>
+            <p>They are intrested in the following programs Taekwondo: ${taekwondo}, Afterschool: ${afterschool}, trip: ${trip}, Behavioral Services: ${behavioralService}, Yotae: ${yotae}</p>
             <h2>Participant Name('s)</h2>
             <ol>
               <li>Name: ${firstParticipantName}, Age: ${firstAge} and Medical Conciderations: ${firstMedNeeds}</li>

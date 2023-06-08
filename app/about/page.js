@@ -1,9 +1,13 @@
 'use client';
 import { useState } from "react";
+
 import Image from "next/image";
-import "./about.css";
+import Link from "next/link";
+
 import { AiFillStar } from "react-icons/ai";
 import { GrCircleInformation } from "react-icons/gr";
+
+import "./about.css";
 
 export default function About() {
 
@@ -18,7 +22,7 @@ export default function About() {
   };
   return (
     <>
-      <div className="aboutPage">
+      <div className="aboutPage">  
         <div className="aboutTop">
           <div className="aboutTopLeft">
             <div className="aboutTopLeftBox">
@@ -31,11 +35,11 @@ export default function About() {
               />
               <div>
                 <div className="aboutTopLeftBoxInnerBox">
-                  <h4 className="fontRed">Master Robert Von Der Becke</h4>
                   <ul className="list">
-                    <li>Master in Taekwondo</li>
+                    <li> Master in Taekwondo</li>
                     <li>Masters is Psychology</li>
                     <li>Masters in Education*</li>
+                  <h4 className="aboutH4 fontRed">Master Robert Von Der Becke</h4>
                     {/* <li
                       onMouseOver={handleMouseOver}
                       // onMouseOut={handleMouseOut}
@@ -52,7 +56,7 @@ export default function About() {
           </div>
           <div className="aboutTopRight">
             <div className="aboutTopRightContent">
-              <h5 className="underline">About the TKD Academy</h5>
+              <h5 className="redLine">About the TKD Academy</h5>
               <p className="aboutText">
                 The Academy succesfully blends Taekwondo, Behavior, and
                 Conditioning into a comprehensive program that yeilds results in
@@ -60,11 +64,11 @@ export default function About() {
                 broad range of result is due to the narrow focus of training.
                 Appling science to training we effectively train behaviors and
                 muscle memories in such a way that leadership and mastery of
-                self become evident in daily actions and choices. If you want
+                self become evident in daily actions and choices. If you want to
                 achieve your full mental and physical potential The Academy is
                 the school for you!
               </p>
-              <button className="aboutEnrollBtn">Enroll Now</button>
+              <Link href='/enroll'><button className="btn aboutEnrollBtn">Enroll Now</button></Link>
             </div>
           </div>
         </div>
@@ -80,7 +84,7 @@ export default function About() {
                 stay amazingly positive. I can't say enough great things about
                 him and his studio."
               </p>
-              <span>
+              <span className="stars">
                 <AiFillStar color="#ffdd00" size={30} />
                 <AiFillStar color="#ffdd00" size={30} />
                 <AiFillStar color="#ffdd00" size={30} />
@@ -100,7 +104,7 @@ export default function About() {
                 technique building, lessons that apply both on and off the mat.
                 And we’re making new friends- always a bonus!"
               </p>
-              <span>
+              <span className="stars">
                 <AiFillStar color="#ffdd00" size={30} />
                 <AiFillStar color="#ffdd00" size={30} />
                 <AiFillStar color="#ffdd00" size={30} />
@@ -118,7 +122,7 @@ export default function About() {
                 children more than my advise. If you can handle the truth this
                 school will put you on a positive path for your entire life."
               </p>
-              <span>
+              <span className="stars">
                 <AiFillStar color="#ffdd00" size={30} />
                 <AiFillStar color="#ffdd00" size={30} />
                 <AiFillStar color="#ffdd00" size={30} />
@@ -140,7 +144,7 @@ export default function About() {
                 intense workout and is what you make of it. I am grateful to
                 find such a class and instructor so close to home!
               </p>
-              <span>
+              <span className="stars">
                 <AiFillStar color="#ffdd00" size={30} />
                 <AiFillStar color="#ffdd00" size={30} />
                 <AiFillStar color="#ffdd00" size={30} />

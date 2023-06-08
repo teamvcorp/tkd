@@ -1,11 +1,11 @@
 .homeContainer {
- height: 79.5vh;
+   overflow: hidden ; 
 }
 
 .spLayoutTop {
     display: flex;
     justify-content: space-around;
-    height: 38vh;
+    height: 41vh;
 }
 
 .spLayoutTopLeft {
@@ -46,8 +46,9 @@
     border-top: 3px solid white;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     width: 100%; 
-    height: 39vh; 
+    height: 41vh;
 }
 
 .background {
@@ -60,30 +61,41 @@
 /* see .background in Global.css */
 
 .programBox {
+
     background-color: white;
     width: 85%;
     min-width: 55%;
     max-width: 85%;
     max-height: 32rem;
     border-radius: 8px;
+    display: flex;
+    padding: 2.5rem;
+    align-items: flex-start;
+    justify-content: flex-end;
+    
+    position: relative;
    
 }
-.homeProgramTxt {
-    background-color: transparent;
-    margin: 3rem;
-  
+.homeProgramContent {
+    max-width: 70%;
 }
-
-.imgHomePro {
-   transform: translate(16rem, -9rem); 
+.programBox.homeProgramImg {
+    max-width: 20%;
   
     
-}
-.imgHomePro2 {
-    transform: translate(23rem, -17rem);   
  
 }
-.imgHomePro3 {
-    transform: translate(25rem, -15rem);   
-    
+
+.homeProgramH4 {
+    background-color: transparent;
+   margin-bottom: 1rem;
+   
+  
 }
+.homeProgramP {
+    font-size: 1.55vh;
+    line-height: 2.5rem;
+    
+   
+}
+
