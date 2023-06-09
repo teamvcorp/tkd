@@ -9,10 +9,10 @@ export default function Home() {
   return (
     <>
       <div className="homeContainer">
-        <div className="spLayoutTop">  
+        <div className="spLayoutTop">
           <div className="spLayoutTopLeft">
             <h2>Taekwondo</h2>
-            <p>Storm Lake, IA</p>  
+            <p>Storm Lake, IA</p>
             <h5 className="fontRed">Self-Control</h5>
             <h5 className="fontRed">Self-Awareness</h5>
             <h5 className="fontRed">Leadership</h5>
@@ -42,19 +42,19 @@ export default function Home() {
         <div className="spLayoutBottom">
           <div className="spLayoutBottomLeft background">
             <div className="programBox">
-            <div className="homeProgramContent">
-              <h4 className="homeProgramH4">Kids Taekwondo Class</h4>
-              <p className="fontBlack homeProgramP">
-                Our poomsae,self-defense techniques and sparring may be rooted from a
-                long line of masters. Our program however is not stuck in the
-                past. OUr kids program deleiver a fun and engaging curruculuim
-                while teaching to accept our current self and strive to improve
-                future self. We use the highest standards of education to level
-                the playing feild allowing diverse learner to exceed expectaions
-                on there journey to become black belt practitioners.
-              </p>
-            </div>
-          <div className="homeProgramImg"></div>
+              <div className="homeProgramContent">
+                <h4 className="homeProgramH4">Kids Taekwondo Class</h4>
+                <p className="fontBlack homeProgramP">
+                  <ul>
+                    <li>Discipline</li>
+                    <li>Confidence</li>
+                    <li>Self-Control</li>
+                    <li>Self-defense</li>
+                    <li>Physcial-Fitness</li>
+                  </ul>
+                </p>
+              </div>
+              <div className="homeProgramImg"></div>
               <Image
                 className=""
                 src="/tkdGirl.png"
@@ -62,55 +62,57 @@ export default function Home() {
                 width={200}
                 alt="orange belt"
               />
-              
             </div>
           </div>
           <div className="spLayoutBottomMid background">
             <div className="programBox">
               <div className="homeProgramContent">
-              <h4 className="homeProgramTxt">Afterschool Program</h4>
-              <p className="fontBlack homeProgramP">
-                A safe space for kids to learn a range of skills from self
-                managment to computer programing and of course Taekwondo.
-                Academy afterschool program takes all the great qualities of an
-                established Martial arts school and uses it to create a fun,
-                safe, and puroposful place for your kids to thrive. The journey
-                to self mastery starts can start here.
-              </p>
+                <h4 className="homeProgramTxt">Afterschool Program</h4>
+                <p className="fontBlack homeProgramP">
+                  <ul>
+                    <li>Taekwondo</li>
+                    <li>Homework time</li>
+                    <li>Group Activities</li>
+                    <li>STEM learning</li>
+                    <li>
+                      <Link href="/program/afterschool">Read more...</Link>
+                    </li>
+                  </ul>
+                </p>
               </div>
-<div className="homeProgramImg"> 
-              <Image
-                className="homeAfterschoolBoy"
-                src="/afterschoolBoy.png"
-                height={600}
-                width={600}
-                alt="kid with backpack"
-              />
-
-</div>
+              <div className="homeProgramImg">
+                <Image
+                  className="homeAfterschoolBoy"
+                  src="/afterschoolBoy.png"
+                  height={600}
+                  width={600}
+                  alt="kid with backpack"
+                />
+              </div>
             </div>
           </div>
 
           <div className="spLayoutBottomRight background">
             <div className="programBox">
-              <div className="homeProgramContent"> 
-              <h4 className="homeProgramTxt">TRIP Outreach</h4>
-              <p className="fontBlack homeProgramP">
-                TRIP Outreach uses community service projects to implement
-                lessons of servent leadership, mastery of self, and power of
-                inclusion. This great program runs upto 6 days per week and
-                starts at $50 per year! Enroll now or come check us out.
-              </p>
+              <div className="homeProgramContent">
+                <h4 className="homeProgramTxt">TRIP Outreach</h4>
+                <p className="fontBlack homeProgramP">
+                  <ul>
+                    <li>Community Involvement</li>
+                    <li>Taekwondo</li>
+                    <li>Group Activities</li>
+                    <li>Volunteering</li>
+                  </ul>
+                </p>
               </div>
               <div className="homeProgramImg">
-              <Image
-                className="imgSm imgHomePro3"
-                src="/happyKids.png"
-                height={200}
-                width={250}
-                alt="kids jumping and happy"
-              />
-
+                <Image
+                  className="imgSm imgHomePro3"
+                  src="/happyKids.png"
+                  height={200}
+                  width={250}
+                  alt="kids jumping and happy"
+                />
               </div>
             </div>
           </div>
