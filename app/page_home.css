@@ -1,101 +1,119 @@
 .homeContainer {
-   overflow: hidden ; 
+  overflow: hidden;
 }
 
 .spLayoutTop {
-    display: flex;
-    justify-content: space-around;
-    height: 41vh;
+  display: flex;
+  justify-content: space-around;
+  height: 41vh;
 }
 
 .spLayoutTopLeft {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    width: 40%;
-    margin-right: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 40%;
+  margin-right: 5rem;
 }
 
-.spLayoutTopMid { 
-    border-left: 2px solid white;
-    width: 15%;
+.spLayoutTopMid {
+  border-left: 2px solid white;
+  width: 15%;
 }
 
 .imgLG {
-    position: absolute;
-    top: 10rem;
-    right: 40rem;
+  position: absolute;
+  top: 10rem;
+  right: 40rem;
 }
 
 .spLayoutTopRight {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: space-evenly;
-    margin-right: 15rem;
-    width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  margin-right: 15rem;
+  width: 33%;
 }
 
 .homeHeroTxt {
-    text-align: end;
+  text-align: end;
 }
 .enrollHomeBtn {
-    margin-top: 3rem;
+  margin-top: 3rem;
 }
 .spLayoutBottom {
-    border-top: 3px solid white;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%; 
-    height: 41vh;
+  border-top: 3px solid white;
+  display: flex;
+
+  width: 100%;
+  height: 41vh;
 }
 
 .background {
-    width: 34%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;  
+  width: 34%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /* see .background in Global.css */
-
-.programBox {
-
-    background-color: white;
-    width: 85%;
-    min-width: 55%;
-    max-width: 85%;
-    max-height: 32rem;
-    border-radius: 8px;
-    display: flex;
-    padding: 2.5rem;
-    align-items: flex-start;
-    justify-content: flex-end;
-    
-    position: relative;
-   
+.imgTkd {
+  background-image: url(/tkdGirl.png);
+  background-size: 60%;
 }
+.imgAfterschool {
+  background-image: url(/afterschoolBoy.png);
+  background-size: 38%;
+}
+.imgTRIP {
+  background-image: url(/happyKids.png);
+  background-size: 48%;
+}
+.imgProgramBox {
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  width: 100%;
+  height: 100%;
+}
+.programBox {
+  background-color: white;
+  width: 85%;
+  height: 32rem;
+  border-radius: 8px;
+}
+
 .homeProgramContent {
-    max-width: 70%;
+  padding: 2.5rem;
+  max-width: 70%;
+}
+.listItem  {
+font-size: 2rem;
+line-height: 3.5rem;
+font-family: 'lato', sans-serif;
+font-weight: 400;
+color: var(--navy);
+list-style-type: disc;
+list-style-position: inside;
+padding-left: 2.5rem;
+}
+.link {
+    color: var(--blue);
+    text-decoration: underline;
+    list-style-type: none;
+    padding-left: 5.5rem;
+
+
 }
 .programBox.homeProgramImg {
-    max-width: 20%;
-  
-    
- 
+  max-width: 20%;
 }
 
 .homeProgramH4 {
-    background-color: transparent;
-   margin-bottom: 1rem;
-   
-  
-}
-.homeProgramP {
-    font-size: 1.55vh;
-    line-height: 2.5rem;
-    
-   
+  background-color: transparent;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--navy);
+  width: fit-content;
 }
 

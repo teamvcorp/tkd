@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import "./page_home.css";
+// import "./page_home.css";
 
 export default function Home() {
   const handleClick = () => {};
@@ -42,78 +42,63 @@ export default function Home() {
         <div className="spLayoutBottom">
           <div className="spLayoutBottomLeft background">
             <div className="programBox">
-              <div className="homeProgramContent">
-                <h4 className="homeProgramH4">Kids Taekwondo Class</h4>
-                <p className="fontBlack homeProgramP">
-                  <ul>
-                    <li>Discipline</li>
-                    <li>Confidence</li>
-                    <li>Self-Control</li>
-                    <li>Self-defense</li>
-                    <li>Physcial-Fitness</li>
-                  </ul>
-                </p>
+              <div className="imgProgramBox imgTkd">
+                <div className="homeProgramContent">
+                  <h4 className="homeProgramH4">Taekwondo Classes</h4>
+                  <p className="fontBlack homeProgramP">
+                    <ul className="homeProgramList">
+                      <li className="listItem">Discipline</li>
+                      <li className="listItem">Confidence</li>
+                      <li className="listItem">Self-Control</li>
+                      <li className="listItem">Self-Defense</li>
+                      <li className="listItem">Physcial-Fitness</li>
+                      <li className="link">   <Link href="/program"><i>Learn More</i></Link></li>
+                    </ul>
+                  </p>
+                </div>
               </div>
-              <div className="homeProgramImg"></div>
-              <Image
-                className=""
-                src="/tkdGirl.png"
-                height={200}
-                width={200}
-                alt="orange belt"
-              />
             </div>
           </div>
+
           <div className="spLayoutBottomMid background">
             <div className="programBox">
+              <div className="imgProgramBox imgAfterschool">
               <div className="homeProgramContent">
-                <h4 className="homeProgramTxt">Afterschool Program</h4>
+                <h4 className="homeProgramH4">Afterschool Program</h4>
                 <p className="fontBlack homeProgramP">
-                  <ul>
-                    <li>Taekwondo</li>
-                    <li>Homework time</li>
-                    <li>Group Activities</li>
-                    <li>STEM learning</li>
-                    <li>
-                      <Link href="/program/afterschool">Read more...</Link>
+                  <ul className="homeProgramList">
+                    <li className="listItem">Taekwondo</li>
+                    <li className="listItem">Homework Time</li>
+                    <li className="listItem">Group Activities</li>
+                    <li className="listItem">STEM Learning</li>
+                    <li className="link">
+                      <Link href="/program/afterschool"><i>Learn More</i></Link>
                     </li>
                   </ul>
                 </p>
               </div>
-              <div className="homeProgramImg">
-                <Image
-                  className="homeAfterschoolBoy"
-                  src="/afterschoolBoy.png"
-                  height={600}
-                  width={600}
-                  alt="kid with backpack"
-                />
               </div>
             </div>
           </div>
 
           <div className="spLayoutBottomRight background">
             <div className="programBox">
+            <div className="imgProgramBox imgTRIP">
               <div className="homeProgramContent">
-                <h4 className="homeProgramTxt">TRIP Outreach</h4>
+                <h4 className="homeProgramH4">TRIP Outreach</h4>
                 <p className="fontBlack homeProgramP">
-                  <ul>
-                    <li>Community Involvement</li>
-                    <li>Taekwondo</li>
-                    <li>Group Activities</li>
-                    <li>Volunteering</li>
+                  <ul className="homeProgramList">
+                    <li className="listItem">Community Involvement</li>
+                    <li className="listItem">Taekwondo</li>
+                    <li className="listItem">Group Activities</li>
+                    <li className="listItem">Volunteering</li>
+                    <li className="link"> <Link href="/program/trip"><i>Learn More</i></Link></li>
                   </ul>
                 </p>
               </div>
-              <div className="homeProgramImg">
-                <Image
-                  className="imgSm imgHomePro3"
-                  src="/happyKids.png"
-                  height={200}
-                  width={250}
-                  alt="kids jumping and happy"
-                />
-              </div>
+
+            </div>
+             
             </div>
           </div>
         </div>
