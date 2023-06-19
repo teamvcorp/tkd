@@ -18,13 +18,20 @@
 
 .spLayoutTopMid {
   border-left: 2px solid white;
-  width: 15%;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
 }
 
 .imgLG {
-  position: absolute;
+  
   top: 10rem;
   right: 40rem;
+}
+.tkdKidsHome {
+  margin-left: 2rem;
 }
 
 .spLayoutTopRight {
@@ -33,7 +40,7 @@
   align-items: flex-end;
   justify-content: space-evenly;
   margin-right: 15rem;
-  width: 33%;
+  width: 35%;
 }
 
 .homeHeroTxt {

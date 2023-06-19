@@ -15,15 +15,15 @@ export default function Home() {
             <p>Storm Lake, IA</p>
             <h5 className="fontRed">Self-Control</h5>
             <h5 className="fontRed">Self-Awareness</h5>
-            <h5 className="fontRed">Leadership</h5>
+            <h5 className="fontRed">Leadership</h5>  
           </div>
 
           <div className="heroImg spLayoutTopMid">
             <Image
-              className="imgLG"
+              className="imgLG tkdKidsHome"
               src="/tkdGroup.png"
-              height={400}
-              width={575}
+              height={700}
+              width={850}
               alt="kids doing taekwondo"
             />
           </div>

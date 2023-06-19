@@ -6,6 +6,7 @@ import "./enroll.css";
 
 export default function ContactUs() {
   const router = useRouter();
+  
   const [formData, setFormData] = useState({
     fullname: "",
     email: "",
