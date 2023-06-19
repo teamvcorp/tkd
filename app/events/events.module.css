@@ -1,0 +1,64 @@
+/* .eventsContainer {
+    height: 82vh;
+   
+  flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.scheduleContainer {
+    display: flex;
+    /* flex-wrap: nowrap; */
+    /* flex-direction: column;
+    max-width: 30%;
+}
+.calendar {
+    max-width: 60%;
+} */ 
+
+.eventsContainer {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10rem;
+}
+.scheduleContainer {
+    background-color: white;
+    width: 45rem;
+    height: 65rem;
+    border-radius: 10px;
+    transform: translateX(10rem);
+    height: 60%;
+}
+
+.scheduleContainer h1{
+    color: white;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+ 
+    
+}
+.scheduleContainer h2 {
+    color: var(--navy);
+    font-size: 2.5rem;
+    text-align: center;
+}
+.scheduleContainer p {
+    color: var(--navy);
+    font-size: 2rem;
+    text-align: center;
+   
+}
+.scheduleContent {
+    margin-top: 3rem;
+}
+.headerContainer {
+    background-color: var(--red);
+    width: 100%;
+    border-radius: 10px 10px 0 0 ;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
