@@ -1,0 +1,51 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+
+model Family {
+  id Int @id @default(autoincrement())
+  name String
+  family_image String
+  family_gallery String[]
+  bio String
+  slug String @unique
+  focus FOCUS
+  students Student[]
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+}
+
+
+model Student {
+  id Int @id @default(autoincrement())
+  name String
+  program PROGRAM
+  bio String
+  family_id Int
+  family Family @relation(fields: [family_id], references: [id])
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+}
+
+
+
+enum FOCUS {
+  FITNESS
+  MASTERY
+  COMPETITOR
+}
+enum PROGRAM {
+  AFTERSCHOOL
+  TAEKWONDO
+  YOTAE
+  TRIP
+}

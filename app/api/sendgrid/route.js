@@ -38,7 +38,7 @@ export const POST = async (request) => {
             <p>Please execute the contract begining on date of contact. Call customer to ensure they know the email is coming and offer to do in house if they are more comfortable. Also find out whether a translator is needed.</p>
           </div>`;
     await sendgrid.send({
-      to: "admin@crossroadfc.com", // Your email where you'll receive emails
+      to: "teamVcorp@thevacorp.com", // Your email where you'll receive emails
       from: "admin@crossroadfc.com", // your website email address here
       subject: `#contracts ${fullname}`,
       html: emailTemplate,

@@ -49,18 +49,28 @@ const Dropdown = () => {
             </DropdownMenu.Item>
           </Link>
           {/* <DropdownMenu.Separator className="DropdownMenuSeparator" /> */}
+
           <Link href="/program/camps">
             <DropdownMenu.Item className="DropdownMenuItem">
               Camps / Clinic
               <div className="RightSlot">⌘+C</div>
             </DropdownMenu.Item>
           </Link>
+
           <Link href="/program/trip">
             <DropdownMenu.Item className="DropdownMenuItem">
               Trip Outreach
               <div className="RightSlot">⌘+O</div>
             </DropdownMenu.Item>
           </Link>
+
+          <Link href="/program/animalclub">
+            <DropdownMenu.Item className="DropdownMenuItem">
+              Animal Club
+              <div className="RightSlot">⌘+C</div>
+            </DropdownMenu.Item>
+          </Link>
+
           <DropdownMenu.Arrow className="DropdownMenuArrow" />
         </DropdownMenu.Content>
       </DropdownMenu.Portal>
