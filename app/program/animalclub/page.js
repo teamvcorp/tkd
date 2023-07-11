@@ -11,7 +11,7 @@ const Animal = () => {
       
     </div>
       <p>
-        I am so happy to start a Animal Club to help kids learn more and more about animals every day!
+        I am so happy to start a Animal Club to help kids learn more and more about animals every day! Animals are awesome
       </p>
     </>
   );
